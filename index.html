@@ -10,13 +10,23 @@
     <div id="game-container">
         <h1>Incremental Idle Game</h1>
         <div id="resource-display">
-            <p>Resources: <span id="resource-count">0</span></p>
+            <p><img src="resource-icon.png" alt="Resource Icon" class="icon"> Resources: <span id="resource-count">0</span></p>
         </div>
-        <button id="generate-resource">Generate Resource</button>
+        <button id="generate-resource"><img src="generate-icon.png" alt="Generate Icon" class="icon"> Generate Resource</button>
         <div id="upgrades">
             <h2>Upgrades</h2>
-            <button id="upgrade-1" disabled>Upgrade 1 (+1 per click) - Cost: 10</button>
-            <button id="automation-1" disabled>Automation (+1 per second) - Cost: 50</button>
+            <button id="upgrade-1" disabled>
+                <img src="upgrade-icon.png" alt="Upgrade Icon" class="icon"> Upgrade 1 (+1 per click) - Cost: 10
+            </button>
+            <button id="automation-1" disabled>
+                <img src="automation-icon.png" alt="Automation Icon" class="icon"> Automation (+1 per second) - Cost: 50
+            </button>
+        </div>
+        <div id="stats">
+            <h2>Stats</h2>
+            <p>Total Resources Generated: <span id="total-resources">0</span></p>
+            <p>Upgrade Level: <span id="upgrade-level">0</span></p>
+            <p>Automation Level: <span id="automation-level">0</span></p>
         </div>
     </div>
     <script src="script.js"></script>
