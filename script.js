@@ -13,6 +13,8 @@ const automationLevelEl = document.getElementById("automation-level");
 const generateResourceBtn = document.getElementById("generate-resource");
 const upgrade1Btn = document.getElementById("upgrade-1");
 const automation1Btn = document.getElementById("automation-1");
+const upgrade2Btn = document.getElementById("upgrade-2");
+const automation2Btn = document.getElementById("automation-2");
 
 // Update Resource Display
 function updateResourceDisplay() {
@@ -52,10 +54,34 @@ automation1Btn.addEventListener("click", () => {
     }
 });
 
+// Upgrade 2: Larger resource per click boost
+upgrade2Btn.addEventListener("click", () => {
+    if (resourceCount >= 100) {
+        resourceCount -= 100;
+        resourcePerClick += 5;
+        upgradeLevel += 1;
+        updateResourceDisplay();
+        checkUpgrades();
+    }
+});
+
+// Automation 2: Larger resource per second boost
+automation2Btn.addEventListener("click", () => {
+    if (resourceCount >= 500) {
+        resourceCount -= 500;
+        resourcePerSecond += 5;
+        automationLevel += 1;
+        updateResourceDisplay();
+        checkUpgrades();
+    }
+});
+
 // Check if upgrades can be activated
 function checkUpgrades() {
     upgrade1Btn.disabled = resourceCount < 10;
     automation1Btn.disabled = resourceCount < 50;
+    upgrade2Btn.disabled = resourceCount < 100;
+    automation2Btn.disabled = resourceCount < 500;
 }
 
 // Automate resource generation
