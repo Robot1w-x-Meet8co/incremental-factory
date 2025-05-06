@@ -1,3 +1,5 @@
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +10,36 @@
 </head>
 <body>
     <div id="game-container">
-        <h1>Incremental Idle Game</h1>
-        <div id="resource-display">
-            <p><img src="assets/icons/download.png" alt="Resource Icon" class="icon"> Resources: <span id="resource-count">0</span></p>
-        </div>
-        <button id="generate-resource">
-            <img src="assets/icons/download (1).png" alt="Generate Icon" class="icon"> Generate Resource
-        </button>
-        <div id="upgrades">
-            <h2>Upgrades</h2>
-            <button id="upgrade-1" disabled>
-                <img src="assets/icons/icons8-upgrade-64.png" alt="Upgrade Icon" class="icon"> Upgrade 1 (+1 per click) - Cost: 10
+        <header>
+            <h1>Incremental Idle Game</h1>
+            <p><img src="assets/icons/download.png" alt="Resource Icon" id="resource-icon"> Resources: <span id="resource-count">0</span></p>
+        </header>
+        <main>
+            <button id="generate-resource" class="action-button">
+                <img src="assets/icons/download (1).png" alt="Generate Icon" class="icon"> Generate Resource
             </button>
-            <button id="automation-1" disabled>
-                <img src="assets/icons/icons8-automation-50.png" alt="Automation Icon" class="icon"> Automation (+1 per second) - Cost: 50
-            </button>
-        </div>
-        <div id="stats">
-            <h2>Stats</h2>
-            <p>Total Resources Generated: <span id="total-resources">0</span></p>
-            <p>Upgrade Level: <span id="upgrade-level">0</span></p>
-            <p>Automation Level: <span id="automation-level">0</span></p>
-        </div>
+            <section id="upgrades">
+                <h2>Upgrades</h2>
+                <button id="upgrade-1" class="action-button" disabled>
+                    <img src="assets/icons/icons8-upgrade-64.png" alt="Upgrade Icon" class="icon"> Upgrade 1 (+1 per click) - Cost: 10
+                </button>
+                <button id="automation-1" class="action-button" disabled>
+                    <img src="assets/icons/icons8-automation-50.png" alt="Automation Icon" class="icon"> Automation (+1 per second) - Cost: 50
+                </button>
+                <button id="upgrade-2" class="action-button" disabled>
+                    <img src="assets/icons/icons8-upgrade-64.png" alt="Upgrade Icon" class="icon"> Upgrade 2 (+5 per click) - Cost: 100
+                </button>
+                <button id="automation-2" class="action-button" disabled>
+                    <img src="assets/icons/icons8-automation-50.png" alt="Automation Icon" class="icon"> Automation 2 (+5 per second) - Cost: 500
+                </button>
+            </section>
+            <section id="stats">
+                <h2>Stats</h2>
+                <p>Total Resources Generated: <span id="total-resources">0</span></p>
+                <p>Upgrade Level: <span id="upgrade-level">0</span></p>
+                <p>Automation Level: <span id="automation-level">0</span></p>
+            </section>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
